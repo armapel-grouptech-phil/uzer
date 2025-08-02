@@ -80,7 +80,7 @@ h1 { font-size: 36px; font-weight: 700; margin-bottom: 30px; }
 .dev-info p { font-size: 14px; color: var(--secondary-text); line-height: 1.5; margin-bottom: 15px;}
 .menu-divider { width: 80%; max-width: 300px; border: none; border-top: 1px solid var(--border-color); margin: 0 auto 30px auto; }
 .powered-by-section h3, .social-links-container h3 { font-size: 14px; font-weight: 500; color: var(--secondary-text); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.8px; }
-.icon-links { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; }
+.icon-links { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
 .icon-link { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background-color: var(--surface-color);  border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.08); transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .icon-link:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.12); }
 .icon-link img { width: 24px; height: 24px; object-fit: contain; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border-radius: 50%; }
