@@ -2,70 +2,138 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content= "width=device-width, user-scalable=no">
-    <title>uzer! - AI Username Generator</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>uzer! - Free Online Username Generator</title>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 </head>
 <body>
-    <div class="menu-page" id="menu-page">
+    <div class="loading-overlay" id="loading-overlay"><div class="spinner"></div></div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="logo">uzer<span>!</span></div>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu"><span class="material-symbols-rounded">menu</span></button>
+    </header>
+
+    <!-- Floating Menu -->
+    <div class="floating-menu" id="floating-menu">
+        <a href="#" class="menu-item" id="about-btn">
+            <span class="material-symbols-rounded">info</span> About Us
+        </a>
+        <a href="#" class="menu-item" id="terms-btn">
+            <span class="material-symbols-rounded">gavel</span> Terms of Service
+        </a>
+        <a href="#" class="menu-item" id="privacy-btn">
+            <span class="material-symbols-rounded">policy</span> Privacy Policy
+        </a>
+        <a href="#" class="menu-item" id="feedback-btn">
+            <span class="material-symbols-rounded">feedback</span> Feedback & Suggestions
+        </a>
+    </div>
+
+    <!-- About Us Page Overlay -->
+    <div class="page-overlay" id="about-page">
         <header class="menu-header">
-            <button class="back-btn" id="back-btn" aria-label="Go back"><span class="material-symbols-rounded">arrow_forward</span></button>
-            <div class="logo">Menu</div>
+            <button class="back-btn" aria-label="Go back"><span class="material-symbols-rounded">arrow_back</span></button>
+            <div class="page-title">About Us</div>
             <div class="header-placeholder"></div>
         </header>
         <div class="menu-content">
+            <!-- === UPDATED ABOUT UZER! SECTION === -->
             <div class="menu-section">
                 <h1>About uzer!</h1>
                 <p class="menu-description">
-                    <strong>uzer!</strong> is the ultimate AI-powered username generator, crafted specifically for <strong>Gen Z</strong>. In a digital world where your online handle is your first impression, we believe finding a unique and aesthetic identity should be effortless and fun. <strong>uzer!</strong> goes beyond basic name mashups by analyzing current trends, slang, and vibes from platforms like TikTok and Instagram to suggest creative, memorable usernames that truly represent you. Stop the endless brainstorming and let our AI help you discover a handle that makes you stand out. Your new online identity is just a tap away!
+                    <strong>uzer!</strong> is a Free Online Generator tool designed to spark creativity and help users discover the perfect online identity. In a crowded digital world, a unique username is your first impression. Our tool goes beyond simple name combinations, utilizing a curated database of modern slang, aesthetic keywords, and popular naming conventions to generate memorable and relevant results. Whether you're a gamer, a content creator, or simply seeking a fresh handle for your social media, uzer! provides instant, high-quality suggestions tailored to your style.
                 </p>
             </div>
-
+            <!-- === RESTORED DEVELOPER SECTION === -->
             <div class="menu-section">
-                <h1>Behind uzer!</h1>
-                <img src="https://raw.githubusercontent.com/armapeltech/Uzer/refs/heads/main/logo/armapel-logo-black.png" alt="Developers Logo" class="dev-photo">
-                <div class="dev-info">
-                    <p>Developer</p>
-                </div>
+                <h1>Developer</h1>
+                <img src="https://raw.githubusercontent.com/armapeltech/Uzer/refs/heads/main/logo/armapel-logo-black.png" alt="Armapel Logo" class="developer-logo">
+                <p class="menu-description">
+                    <strong>Armapel</strong> is a Technology and Web Developer based in the Philippines that provides Filipinos a better, more accessible, and beautifully designed digital experience. We believe that world-class tools can and should be built locally. Our mission is to empower individuals and brands by creating intuitive web applications that are both powerful and a pleasure to use, proving that elegant and efficient technology can be crafted with a local heart and a global vision.
+                </p>
             </div>
-
-            <div class="menu-section">
-                 <h1>Feedback & Suggestions</h1>
-                 <p class="menu-description">Have an idea or found a bug? I'd love to hear from you!</p>
-                 <div class="social-links-container">
-                    <div class="icon-links">
-                        <a href="mailto:arbiemapalopeligro@gmail.com" class="icon-link" title="Email" target="_blank" rel="noopener noreferrer">
-                            <img src="https://cdn3.iconfinder.com/data/icons/web-ui-3/128/Mail-2-1024.png" alt="Email Icon">
-                        </a>
-                        <a href="https://telegram.me/arbiepeligro" class="icon-link" title="Telegram" target="_blank" rel="noopener noreferrer">
-                            <img src="https://static.vecteezy.com/system/resources/previews/019/874/353/non_2x/telegram-apps-icon-free-png.png" alt="Telegram Icon">
-                        </a>
-                    </div>
-                </div>
+        </div>
+    </div>
+    
+    <!-- Terms of Service Page Overlay -->
+    <div class="page-overlay" id="terms-page">
+        <header class="menu-header">
+            <button class="back-btn" aria-label="Go back"><span class="material-symbols-rounded">arrow_back</span></button>
+            <div class="page-title">Terms of Service</div>
+            <div class="header-placeholder"></div>
+        </header>
+        <div class="menu-content">
+            <div class="menu-section" style="text-align: left;">
+                <p class="menu-description" style="text-align: left;">
+                    Welcome to uzer!. By accessing and using our application, you agree to the following terms and conditions:
+                    <br><br>
+                    <strong>1. Use of Service:</strong> This tool is provided for personal, non-commercial use to generate username ideas. You are responsible for ensuring that your chosen username does not infringe on any trademarks or the rights of others.
+                    <br><br>
+                    <strong>2. Limitation of Liability:</strong> uzer! and its developer, Armapel, are not responsible for the availability or suitability of any generated username on any third-party platform. The tool is provided "as is" without warranties of any kind.
+                    <br><br>
+                    <strong>3. Prohibited Conduct:</strong> You agree not to use this service for any unlawful purpose or to generate usernames that are offensive, hateful, or defamatory.
+                </p>
             </div>
-            
-            <hr class="menu-divider">
-
-            <div class="version-info">
-                Version 1.0.0
+        </div>
+    </div>
+    
+    <!-- Privacy Policy Page Overlay -->
+    <div class="page-overlay" id="privacy-page">
+        <header class="menu-header">
+            <button class="back-btn" aria-label="Go back"><span class="material-symbols-rounded">arrow_back</span></button>
+            <div class="page-title">Privacy Policy</div>
+            <div class="header-placeholder"></div>
+        </header>
+        <div class="menu-content">
+            <div class="menu-section" style="text-align: left;">
+                 <p class="menu-description" style="text-align: left;">
+                    Your privacy is critically important to us.
+                    <br><br>
+                    <strong>1. Data Collection:</strong> uzer! is a client-side application. This means it operates entirely on your device's web browser. We do not collect, save, store, or transmit any personal information you enter, including keywords or selected preferences.
+                    <br><br>
+                    <strong>2. No Cookies or Tracking:</strong> This application does not use cookies or any other tracking technologies to monitor your activity. Your session is completely anonymous.
+                    <br><br>
+                    <strong>3. Third-Party Links:</strong> The application may contain links to external sites (like Telegram or an email client). We are not responsible for the privacy practices of these other sites.
+                 </p>
             </div>
         </div>
     </div>
 
-    <header class="header">
-        <button class="menu-btn" id="menu-btn" aria-label="Open menu"><span class="material-symbols-rounded">menu</span></button>
-        <div class="logo">uzer<span>!</span></div>
-        <div class="header-placeholder"></div>
-    </header>
+    <!-- Feedback Page Overlay -->
+    <div class="page-overlay" id="feedback-page">
+        <header class="menu-header">
+            <button class="back-btn" aria-label="Go back"><span class="material-symbols-rounded">arrow_back</span></button>
+            <div class="page-title">Feedback & Suggestions</div>
+            <div class="header-placeholder"></div>
+        </header>
+        <div class="menu-content">
+            <div class="menu-section">
+                <p class="menu-description">Have an idea or found a bug? We'd love to hear from you! We also welcome any suggestions you have for new features or improvements to make our tool even better.</p>
+                <div class="contact-links">
+                    <a href="mailto:arbiepeligro2007@gmail.com" class="contact-link">
+                        <span class="material-symbols-rounded">email</span> Email
+                    </a>
+                    <a href="https://telegram.com/arbiepeligro" target="_blank" class="contact-link">
+                        <img src="https://static.vecteezy.com/system/resources/previews/019/874/353/non_2x/telegram-apps-icon-free-png.png" alt="Telegram Icon" class="contact-icon"> Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application Content -->
     <main class="main-content">
         <h1>Find your new identity.</h1>
-        <div class="input-group"><input type="text" id="name-input" class="input-field" placeholder="Your name or keyword..."></div>
+        <div class="input-group">
+            <input type="text" id="name-input" class="input-field" placeholder="Your name or keyword..." autocomplete="off">
+        </div>
         <div class="selector-group">
             <h2>Choose a gender vibe:</h2>
             <div class="chips-container" id="gender-chips">
@@ -78,7 +146,23 @@
         <button class="generate-btn" id="generate-btn">Generate!</button>
         <div id="results-container"></div>
     </main>
-    <footer class="footer">We're continuously improving your experience. Updates are coming soon.</footer>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-line-one">
+            <span>from</span>
+            <img src="https://raw.githubusercontent.com/armapeltech/Uzer/refs/heads/main/logo/armapel-logo-black.png" alt="Armapel Logo" class="footer-logo">
+        </div>
+        <div class="footer-copyright">
+            <span>©2025.</span>
+            <div class="footer-uzer-logo">uzer<span>!</span></div>
+            <span>, All Rights Reserved.</span>
+        </div>
+        <div class="footer-version">
+            Version 1.0.3
+        </div>
+    </footer>
+
     <div class="toast" id="toast">Copied!</div>
 
     <script src="script.js"></script>
