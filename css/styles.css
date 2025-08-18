@@ -466,7 +466,8 @@ h1 {
     display: block; 
     margin: 15px auto; 
     width: 120px; 
-    object-fit: contain; 
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .separator-line { 
@@ -512,6 +513,7 @@ h1 {
 .footer-logo {
     height: 9px;
     width: auto;
+    pointer-events: none;
 }
 
 .footer-version {
