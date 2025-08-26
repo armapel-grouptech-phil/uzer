@@ -3,68 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Uzer!</title>
-    <link rel="icon" type="image/png" href="/logo/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/logo/favicon.svg" />
-    <link rel="shortcut icon" href="/logo/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple-touch-icon.png" />
-    <link rel="manifest" href="/logo/site.webmanifest" />
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Armapel - Architecting the Digital Future</title>
+    <link rel="icon" type="image/png" href="logo/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="logo/favicon.svg" />
+    <link rel="shortcut icon" href="logo/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="logo/apple-touch-icon.png" />
+    <link rel="manifest" href="logo/site.webmanifest" />
+    <link rel="stylesheet" href="style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/tt-hoves-pro-trial" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/tt-fors-trial" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 </head>
 <body>
-    <header class="header page-header">
-        <a href="/home" class="back-btn nav-link" aria-label="Go back"><span class="material-symbols-rounded">arrow_back</span></a>
-        <div class="page-title">About Us</div>
-        <div class="header-placeholder"></div>
+
+    <div class="aurora-background">
+        <div class="aurora-dot"></div>
+        <div class="aurora-dot"></div>
+        <div class="aurora-dot"></div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="/" class="nav-logo">
+            <img src="logo/armapel-logo-white.png" alt="Armapel Logo"></a>
+            <div class="desktop-menu">
+                <a href="/contact" class="nav-link">Contact</a>
+                <a href="/faq" class="nav-link">FAQ</a>
+            </div>
+            <button class="menu-icon" onclick="toggleMenu()">
+                <span class="material-symbols-outlined" id="menuIcon">menu</span>
+            </button>
+        </nav>
     </header>
 
-    <div class="page-container">
-        <div class="menu-section text-left">
-            <h1>About uzer!</h1>
-            <p class="menu-description">
-                <strong>uzer!</strong> is a Free Online Generator tool designed to spark creativity and help users discover the perfect online identity. In a crowded digital world, a unique username is your first impression. Our tool goes beyond simple name combinations, utilizing a curated database of modern slang, aesthetic keywords, and popular naming conventions to generate memorable and relevant results.
-            </p>
-        </div>
-
-        <hr class="separator-line">
-
-        <div class="menu-section text-left">
-            <h1>For Inquiries</h1>
-            <p class="menu-description">
-                Have an idea or found a bug? We'd love to hear from you! Feel free to chat with us at <a href="https://m.me/armapeltech" target="_blank">m.me/armapeltech</a> on Messenger.
-            </p>
-        </div>
-
-        <hr class="separator-line">
-
-        <div class="menu-section text-left">
-             <div class="developer-header">
-                <h1>Developer</h1>
-                <a href="https://about-armapel.vercel.app" target="_blank" aria-label="Visit developer's page"><span class="material-symbols-rounded developer-header-icon">open_in_new</span></a>
-            </div>
-            <img src="/logo/armapel-logo-white.png" alt="Armapel Logo" class="developer-logo">
-            <p class="menu-description">
-                <strong>Armapel</strong> is a Technology and Web Developer based in the Philippines that provides Filipinos a better, more accessible, and beautifully designed digital experience. We believe that world-class tools can and should be built locally. Our mission is to empower individuals and brands by creating intuitive web applications that are both powerful and a pleasure to use, proving that elegant and efficient technology can be crafted with a local heart and a global vision.
-            </p>
-        </div>
-
-        <hr class="separator-line">
-        
-        <div class="menu-section text-left">
-            <div class="developer-header">
-               <h1>Powered by</h1>
-               <a href="https://vercel.com/?utm_source=uzer&utm_campaign=oss" target="_blank" rel="noopener noreferrer" class="developer-link">
-               <span class="material-symbols-rounded developer-header-icon">open_in_new</span>
-               </a>
-            </div>
-            <img src="https://vercel.com/vc-ap-vercel-marketing/_next/static/media/vercel-logotype-dark.9f447f76.svg" alt="Vercel Logo" class="developer-logo">
-            <p class="menu-description">As an official Vercel Partner, Armapel leverages Vercel's cutting-edge infrastructure to power our suite of digital experiences, including our products. We build on their Frontend Cloud to ensure every user enjoys a fast, reliable, and seamless experience, delivered with global scale and stability.</p>
-        </div>
+    <div class="floating-menu" id="floatingMenu">
+        <a href="/contact" class="menu-item">Contact</a>
+        <a href="/faq" class="menu-item">FAQ</a>
     </div>
-    <script src="/js/script.js"></script>
+
+    <main>
+        <section class="hero">
+            <div class="hero-card fade-in-up">
+                <div class="hero-card-header">
+                    <h1>Architecting the Digital Future</h1>
+                    <p class="subtitle">Bespoke web solutions for business, innovative digital tools for everyone.</p>
+                </div>
+                <div class="hero-card-buttons">
+                    <a href="#services" class="btn-hero primary">Explore Products</a>
+                    <a href="/contact" class="btn-hero secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-container container">
+            <section id="about" class="content-card">
+                <h2>About Armapel</h2>
+                <p>Armapel is a dynamic technology company and web developer at the forefront of the Philippines' digital transformation. The company's identity is deeply rooted in the vision of its founder, whose name forms the very essence of <strong>Armapel (Ar-Ma-Pel)</strong>. This signifies a personal commitment to excellence in every project, from enterprise-level solutions to public-facing platforms.</p>
+            </section>
+            
+            <section id="history" class="content-card">
+                <h2>Corporate History</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>November 2024</h3>
+                            <p>The company was founded with the launch of its initial product, <strong>lingk IPTV</strong>, an M3U link hosted on GitHub.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>December 2024</h3>
+                            <p>Service for the M3U link was suspended after a key channel from the Philippines became unavailable.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>February 2025</h3>
+                            <p>The company resumed operations with the launch of a new web-based platform, <strong>Lingk</strong>, streaming Cignal Play channels.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>April 2025</h3>
+                            <p>A significant corporate rebranding was undertaken, changing the company name to <strong>Flow Streaming Co., Ltd.</strong> and launching <strong>Flow+</strong> and <strong>FlowNews</strong>.</p>
+                        </div>
+                    </div>
+                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>May 2025</h3>
+                            <p><strong>FlowNews</strong> was discontinued due to technical issues, and the TMDB partnership for <strong>Flow+</strong> was terminated.</p>
+                        </div>
+                    </div>
+                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>July 2025</h3>
+                            <p>The company rebranded a second time to <strong>Armapel</strong>, launching <strong>Uzer!</strong> and rebranding the core streaming service as <strong>Liveplay</strong>.</p>
+                        </div>
+                    </div>
+                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>August 2025</h3>
+                            <p>The <strong>Lingk</strong> brand was reintroduced with a new global website hosting an M3U link for international channels.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="content-card full-width-card">
+                 <h2>Our Products</h2>
+                 <p class="section-description">We are passionately committed to leveraging our technical expertise for the community through innovative, free-to-use digital tools.</p>
+                <div class="product-scroll-container">
+                    <div class="product-showcase">
+                        <div class="product-card product-liveplay">
+                            <div class="product-content">
+                                <h4 class="liveplay-logo">liveplay</h4>
+                                <p>A free live TV streaming website that makes entertainment accessible to everyone.</p>
+                                <a href="https://liveplay.vercel.app/home" target="_blank" class="btn-product">Watch Now</a>
+                            </div>
+                        </div>
+                         <div class="product-card product-lingk">
+                            <div class="product-content">
+                                <h4 class="lingk-logo">lingk</h4>
+                                <p>A free Global IPTV streaming service to discover and watch global channels as easily as possible.</p>
+                                <a href="https://lingk-iptv.vercel.app/home" target="_blank" class="btn-product">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="product-card product-uzer">
+                            <div class="product-content">
+                                <h4 class="uzer-logo">uzer!</h4>
+                                <p>A free and creative online username generator to help users establish their unique online identity.</p>
+                                <a href="https://uzername.vercel.app/home" target="_blank" class="btn-product">Try It Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="sponsors" class="content-card">
+                <h2>Our Sponsors</h2>
+                <p class="section-description">We are proud to partner with these industry leaders who provide the foundational technology for our projects.</p>
+                <div class="sponsors-list">
+                    <!-- Sponsor Item -->
+                    <div class="sponsor-item">
+                        <div class="sponsor-logo-container">
+                             <h3 class="sponsor-logo-text google-ai-logo">Google AI</h3>
+                        </div>
+                        <div class="sponsor-text-container">
+                            <h4 class="sponsor-title">Google AI</h4>
+                            <p class="sponsor-description">We extend our gratitude to Google's Gemini for being an integral part of our creative and development toolkit, enabling us to enhance our products with intelligent solutions.</p>
+                        </div>
+                    </div>
+                    <!-- Sponsor Item -->
+                    <div class="sponsor-item">
+                        <div class="sponsor-logo-container">
+                            <a href="https://vercel.com?utm_source=armapel&utm_campaign=oss" target="_blank" rel="noopener noreferrer">
+                                <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Vercel Logo" class="sponsor-logo">
+                            </a>
+                        </div>
+                        <div class="sponsor-text-container">
+                            <h4 class="sponsor-title">Vercel</h4>
+                            <p class="sponsor-description">Vercel provides the world-class frontend cloud infrastructure that ensures our websites are fast, scalable, and consistently available to users worldwide.</p>
+                        </div>
+                    </div>
+                    <!-- Sponsor Item -->
+                    <div class="sponsor-item">
+                        <div class="sponsor-logo-container">
+                            <a href="https://github.com?utm_source=armapel" target="_blank" rel="noopener noreferrer">
+                               <img src="https://raw.githubusercontent.com/rdimascio/icons/master/icons/dark/github.svg" alt="GitHub Logo" class="sponsor-logo">
+                            </a>
+                        </div>
+                        <div class="sponsor-text-container">
+                            <h4 class="sponsor-title">GitHub</h4>
+                            <p class="sponsor-description">As the backbone of our development process, GitHub hosts our code repositories, fostering a collaborative and efficient workflow through powerful version control.</p>
+                        </div>
+                    </div>
+                    <!-- Sponsor Item -->
+                    <div class="sponsor-item">
+                        <div class="sponsor-logo-container">
+                            <h3 class="sponsor-logo-text shaka-logo">Shaka Player</h3>
+                        </div>
+                        <div class="sponsor-text-container">
+                            <h4 class="sponsor-title">Shaka Player</h4>
+                            <p class="sponsor-description">The high-performance, open-source video player from Google that is the core of our Liveplay and Lingk streaming platforms, ensuring a smooth viewing experience.</p>
+                        </div>
+                    </div>
+                    <!-- Sponsor Item -->
+                    <div class="sponsor-item">
+                        <div class="sponsor-logo-container">
+                            <a href="https://supabase.com?utm_source=armapel" target="_blank" rel="noopener noreferrer">
+                                <img src="https://supabase.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsupabase-logo-wordmark--dark.265d388f.svg&w=256&q=75" alt="Supabase Logo" class="sponsor-logo">
+                            </a>
+                        </div>
+                        <div class="sponsor-text-container">
+                            <h4 class="sponsor-title">Supabase</h4>
+                            <p class="sponsor-description">Supabase serves as our scalable backend, providing robust database, authentication, and storage solutions for the login and user management features in Liveplay.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mission" class="content-card">
+                <h2>Our Mission</h2>
+                <p>Armapel's mission is to masterfully engineer a diverse portfolio of digital products. For our business clients, we deliver bespoke, high-quality web solutions. For the Filipino consumer, we are committed to developing innovative and accessible platforms. Through every line of code, we are dedicated to building a better digital future for the Philippines.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Armapel. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('floatingMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const isActive = menu.classList.toggle('active');
+            
+            menuIcon.textContent = isActive ? 'close' : 'menu';
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.content-card, .product-card, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 10);
+        });
+        
+        const slider = document.querySelector('.product-scroll-container');
+        if (slider) {
+            let isDown = false, startX, scrollLeft;
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                slider.classList.add('active-grab');
+                startX = e.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            });
+            slider.addEventListener('mouseleave', () => { isDown = false; slider.classList.remove('active-grab'); });
+            slider.addEventListener('mouseup', () => { isDown = false; slider.classList.remove('active-grab'); });
+            slider.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - slider.offsetLeft;
+                const walk = (x - startX) * 2;
+                slider.scrollLeft = scrollLeft - walk;
+            });
+        }
+    </script>
 </body>
 </html>
