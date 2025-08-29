@@ -1,65 +1,89 @@
+/* Media query ensures these styles ONLY apply to screens 1024px or wider */
 @media (min-width: 1024px) {
 
+    /* General Body and Layout */
     body {
+        /* Align content to the top instead of centering vertically on large screens */
         justify-content: flex-start;
     }
 
+    /* Homepage Grid Layout */
     .main-content-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
+        grid-template-columns: 1fr 1fr; /* Defines two equal-width columns */
         align-items: flex-start;
+        gap: 60px; /* Space between the two columns */
         width: 100%;
-        max-width: 1200px;
+        max-width: 1200px; /* Wider container for desktop */
         margin-top: 50px;
     }
 
-    .main-content-grid .form-column {
+    /* Column 1: Form */
+    .form-column {
+        grid-column: 1; /* Explicitly place this in the first column */
         text-align: left;
     }
 
-    .header {
-        padding: 0 20px;
-        max-width: none;
-    }
-
-    .main-content-grid h1 {
-        text-align: left;
-        font-size: 3.5rem;
-    }
-
-    .main-content-grid .selector-group h2 {
-        text-align: left;
-    }
-
-    .main-content-grid .chips-container {
-        justify-content: flex-start;
-    }
-
-
-    #results-container {
-        margin-top: 0;
-        position: sticky;
+    /* Column 2: Results */
+    .results-column {
+        grid-column: 2; /* Explicitly place this in the second column */
+        position: sticky; /* Make the results column "stick" on scroll */
         top: 100px;
     }
 
-    .footer {
-        padding-top: 100px;
+    /* Loader Styling */
+    .results-column .loader-container.show {
+        /* Adds vertical padding to center the spinner when it appears */
+        padding: 80px 0;
     }
 
+    /* Footer Styling for Desktop */
+    .main-content-grid .footer {
+        grid-column: 1; /* Place the footer in the first column */
+        padding-top: 40px; /* Add some space above the footer */
+        padding-bottom: 0;
+    }
+
+    /* Header Styling */
+    .header {
+        padding: 0 20px; /* Apply wide padding */
+        max-width: none; /* Allow header to use the full width */
+    }
+
+    /* Form Elements Alignment */
+    .main-content-grid h1 {
+        text-align: left; /* Align title to the left */
+        font-size: 3.5rem; /* Make title larger */
+    }
+
+    .main-content-grid .selector-group h2 {
+        text-align: left; /* Align subtitle to the left */
+    }
+
+    .main-content-grid .chips-container {
+        justify-content: flex-start; /* Align chips to the left */
+    }
+
+    /* Results Container Styling */
+    #results-container {
+        margin-top: 0; /* Remove top margin since it's now in its own column */
+    }
+
+    /* About, Privacy, & Terms Pages Styling */
     .page-header {
-        padding: 0 20px;
+        padding: 0 20px; /* Apply wide padding */
         max-width: none;
-        justify-content: center;
+        justify-content: center; /* Center the header title */
         position: relative;
     }
     
     .page-header .back-btn {
+        /* Position the back button absolutely to not affect title centering */
         position: absolute;
         left: 20px;
     }
 
     .page-container {
-        max-width: 800px;
+        max-width: 800px; /* Increase the max-width for content */
     }
 }
