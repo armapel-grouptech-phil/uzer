@@ -42,7 +42,6 @@ body {
 
 
 .header { 
-    width: 100%;
     positon: fixed;
     display: flex; 
     justify-content: space-between; 
@@ -59,7 +58,7 @@ body {
 
 .main-content { 
     width: 100%; 
-    max-width: 500px; 
+    max-width: 600px; 
     text-align: center; 
     flex-grow: 1; 
 }
@@ -70,7 +69,7 @@ body {
     align-items: center;
     gap: 6px;
     text-align: center;
-    padding: 30px 20px;
+    padding: 0px 20px;
     color: #000;
     font-size: 0.5rem;
     font-weight: 400;
