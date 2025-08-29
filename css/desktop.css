@@ -1,44 +1,41 @@
-/* Media query ensures these styles ONLY apply to screens 1024px or wider */
 @media (min-width: 1024px) {
 
-    /* This targets ONLY the homepage body */
     body.homepage {
         display: grid;
         grid-template-areas:
-            "header header"
-            "form   results"
-            "footer results"; /* This layout is flexible */
+            "header  header"
+            "form    results"
+            "footer  results";
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto 1fr auto;
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
-        gap: 0 60px; /* 0 for rows, 60px for columns */
+        gap: 0 60px;
     }
 
-    /* Assign grid areas */
-    .homepage .header { grid-area: header; }
-    .homepage .main-content { grid-area: form; }
-    .homepage .footer { grid-area: footer; }
+    .homepage .header {
+        grid-area: header;
+        max-width: 100%;
+    }
 
-    /* The main content on desktop is just a container now */
     .homepage .main-content {
-        display: contents; /* Allows children to be placed in the grid */
-    }
-
-    .form-column {
-        text-align: left;
+        display: contents;
     }
     
-    /* REMOVED position: sticky from here */
-    .results-column {
+    .homepage .form-column {
+        grid-area: form;
+        text-align: left;
+    }
+
+    .homepage .results-column {
         grid-area: results;
     }
 
     .homepage .footer {
+        grid-area: footer;
         padding-top: 50px;
         padding-bottom: 20px;
-        justify-self: start;
     }
 
     .homepage h1 {
@@ -56,14 +53,12 @@
     .loader-container.show {
         padding: 80px 0;
     }
-    
+
     #results-container {
         margin-top: 0;
     }
 
-    /* --- General Desktop Styles for OTHER pages --- */
     .page-header {
-        max-width: 1200px;
         margin: 0 auto;
         width: 100%;
         position: relative;
