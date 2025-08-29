@@ -10,6 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple-touch-icon.png" />
     <link rel="manifest" href="/logo/site.webmanifest" />
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/desktop.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -37,7 +38,9 @@
         </a>
     </div>
 
-    <main class="main-content">
+    <main class="main-content main-content-grid">
+    <!-- Column 1: Form -->
+    <div class="form-column">
         <h1>Find your new identity.</h1>
         <div class="input-group">
             <input type="text" id="name-input" class="input-field" placeholder="Your name or keyword..." autocomplete="off">
@@ -52,11 +55,14 @@
             </div>
         </div>
         <button class="generate-btn" id="generate-btn">Generate!</button>
-
         <div class="loader-container" id="loader-container"><div class="spinner"></div></div>
-        
+    </div>
+
+    <!-- Column 2: Results -->
+    <div class="results-column">
         <div id="results-container"></div>
-    </main>
+    </div>
+</main>
     
     <footer class="footer">
         <div class="footer-line-one">
