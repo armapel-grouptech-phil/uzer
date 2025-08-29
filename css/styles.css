@@ -166,7 +166,7 @@ h1 {
 
 .generate-btn { 
     width: 100%; 
-    padding: 16px 20px 0px; 
+    padding: 16px 20px; 
     background-color: var(--accent-color); 
     color: var(--accent-text); 
     border: none; 
