@@ -1,78 +1,70 @@
 /* Media query ensures these styles ONLY apply to screens 1024px or wider */
 @media (min-width: 1024px) {
 
-    /* General Body and Layout */
+    /* Apply Grid layout to the entire page body */
     body {
-        justify-content: flex-start;
-    }
-
-    /* Homepage Grid Layout */
-    .main-content-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: start; /* Use start alignment */
-        gap: 60px;
-        width: 100%;
-        max-width: 1200px;
-        margin-top: 50px;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        grid-template-rows: auto 1fr; /* A row for the header, and a row for content that fills the space */
+        gap: 0 60px; /* 0px row gap, 60px column gap */
+        max-width: 1200px; /* Wider container for desktop */
+        margin: 0 auto; /* Center the entire page layout */
+        padding: 20px;
+        align-content: start; /* Align content to the top */
     }
 
-    /* Column 1: Form */
+    /* Position the header to span both columns */
+    .header {
+        grid-column: 1 / 3; /* Span from column line 1 to 3 */
+        padding: 0;
+    }
+    
+    /* Position the main content to span both columns */
+    .main-content-grid {
+        grid-column: 1 / 3;
+        display: contents; /* This makes the grid see the children of main (.form-column, .results-column) instead of main itself */
+    }
+
     .form-column {
-        grid-column: 1;
+        grid-column: 1; /* Place in the first column */
         text-align: left;
     }
 
-    /* Column 2: Results */
     .results-column {
-        grid-column: 2;
-        position: sticky; /* Keeps results visible on scroll */
+        grid-column: 2; /* Place in the second column */
+        position: sticky;
         top: 100px;
     }
 
-    /* Loader Styling */
-    .results-column .loader-container.show {
+    /* Position the footer to be in the first column, under the form */
+    .footer {
+        grid-column: 1; /* This is the key change */
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    
+    .loader-container.show {
         padding: 80px 0;
     }
 
-    /*
-     * REMOVED the old ".main-content-grid .footer" rule.
-     * The footer will now sit naturally at the bottom of the form column.
-     * This new rule just adds space between the button and the footer.
-    */
-    .form-column .footer {
-        padding-top: 50px; /* Space between Generate button and footer */
-        padding-bottom: 0;
-    }
-    
-    /* Header Styling */
-    .header {
-        padding: 0 20px;
-        max-width: none;
-    }
-
-    /* Form Elements Alignment */
-    .main-content-grid h1 {
-        text-align: left;
+    h1 {
         font-size: 3.5rem;
     }
 
-    .main-content-grid .selector-group h2 {
+    .selector-group h2 {
         text-align: left;
     }
 
-    .main-content-grid .chips-container {
+    .chips-container {
         justify-content: flex-start;
     }
 
-    /* Results Container Styling */
     #results-container {
         margin-top: 0;
     }
 
     /* About, Privacy, & Terms Pages Styling */
     .page-header {
-        padding: 0 20px;
         max-width: none;
         justify-content: center;
         position: relative;
@@ -80,7 +72,7 @@
     
     .page-header .back-btn {
         position: absolute;
-        left: 20px;
+        left: 0;
     }
 
     .page-container {
