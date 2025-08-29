@@ -296,7 +296,7 @@ h1 {
 }
 
 .floating-menu { 
-    position: fixed; 
+    position: absolute; 
     top: 75px; 
     right: 20px; 
     width: 165px; 
