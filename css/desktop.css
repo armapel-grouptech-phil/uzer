@@ -19,6 +19,12 @@
         max-width: 100%;
     }
 
+    .homepage .floating-menu { 
+        position: absolute; 
+        top: 75px; 
+        right: 60px;
+    }
+
     .homepage .main-content {
         display: contents;
     }
