@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple-touch-icon.png" />
     <link rel="manifest" href="/logo/site.webmanifest" />
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/desktop.css"> <!-- ADD THIS LINE -->
+    <link rel="stylesheet" href="/css/desktop.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -38,10 +38,9 @@
         </a>
     </div>
 
-    <!-- The main content is now a grid container for the desktop layout -->
     <main class="main-content main-content-grid">
 
-        <!-- Column 1: Contains the form elements -->
+        <!-- Column 1: Contains the form elements AND the footer -->
         <div class="form-column">
             <h1>Find your new identity.</h1>
             <div class="input-group">
@@ -57,6 +56,19 @@
                 </div>
             </div>
             <button class="generate-btn" id="generate-btn">Generate!</button>
+            
+            <!-- The footer is now INSIDE the form column -->
+            <footer class="footer">
+                <div class="footer-line-one">
+                    <span>from</span>
+                    <img src="/logo/armapel-logo-black.png" alt="Armapel Logo" class="footer-logo">
+                </div>
+                <div class="footer-copyright">
+                    <div></div><span>©2025 <strong>uzer!</strong> , All Rights Reserved.</span>
+                </div>
+                <div class="footer-version"> Version 1.0.3
+                </div>
+            </footer>
         </div>
 
         <!-- Column 2: Contains the loader and results -->
@@ -64,19 +76,6 @@
             <div class="loader-container" id="loader-container"><div class="spinner"></div></div>
             <div id="results-container"></div>
         </div>
-
-        <!-- The footer is moved inside the main grid to be positioned in the first column on desktop -->
-        <footer class="footer">
-            <div class="footer-line-one">
-                <span>from</span>
-                <img src="/logo/armapel-logo-black.png" alt="Armapel Logo" class="footer-logo">
-            </div>
-            <div class="footer-copyright">
-                <div></div><span>©2025 <strong>uzer!</strong> , All Rights Reserved.</span>
-            </div>
-            <div class="footer-version"> Version 1.0.3
-            </div>
-        </footer>
 
     </main>
     
