@@ -49,11 +49,11 @@
     }
 
     .homepage .selector-group h2 {
-        text-align: left;
+        text-align: center;
     }
 
     .homepage .chips-container {
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     .loader-container.show {
