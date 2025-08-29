@@ -3,87 +3,87 @@
 
     /* General Body and Layout */
     body {
-        /* Align content to the top instead of centering vertically on large screens */
         justify-content: flex-start;
     }
 
     /* Homepage Grid Layout */
     .main-content-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Defines two equal-width columns */
-        align-items: flex-start;
-        gap: 60px; /* Space between the two columns */
+        grid-template-columns: 1fr 1fr;
+        align-items: start; /* Use start alignment */
+        gap: 60px;
         width: 100%;
-        max-width: 1200px; /* Wider container for desktop */
+        max-width: 1200px;
         margin-top: 50px;
     }
 
     /* Column 1: Form */
     .form-column {
-        grid-column: 1; /* Explicitly place this in the first column */
+        grid-column: 1;
         text-align: left;
     }
 
     /* Column 2: Results */
     .results-column {
-        grid-column: 2; /* Explicitly place this in the second column */
-        position: sticky; /* Make the results column "stick" on scroll */
+        grid-column: 2;
+        position: sticky; /* Keeps results visible on scroll */
         top: 100px;
     }
 
     /* Loader Styling */
     .results-column .loader-container.show {
-        /* Adds vertical padding to center the spinner when it appears */
         padding: 80px 0;
     }
 
-    /* Footer Styling for Desktop */
-    .main-content-grid .footer {
-        grid-column: 1; /* Place the footer in the first column */
-        padding-top: 40px; /* Add some space above the footer */
+    /*
+     * REMOVED the old ".main-content-grid .footer" rule.
+     * The footer will now sit naturally at the bottom of the form column.
+     * This new rule just adds space between the button and the footer.
+    */
+    .form-column .footer {
+        padding-top: 50px; /* Space between Generate button and footer */
         padding-bottom: 0;
     }
-
+    
     /* Header Styling */
     .header {
-        padding: 0 20px; /* Apply wide padding */
-        max-width: none; /* Allow header to use the full width */
+        padding: 0 20px;
+        max-width: none;
     }
 
     /* Form Elements Alignment */
     .main-content-grid h1 {
-        text-align: left; /* Align title to the left */
-        font-size: 3.5rem; /* Make title larger */
+        text-align: left;
+        font-size: 3.5rem;
     }
 
     .main-content-grid .selector-group h2 {
-        text-align: left; /* Align subtitle to the left */
+        text-align: left;
     }
 
     .main-content-grid .chips-container {
-        justify-content: flex-start; /* Align chips to the left */
+        justify-content: flex-start;
     }
 
     /* Results Container Styling */
     #results-container {
-        margin-top: 0; /* Remove top margin since it's now in its own column */
+        margin-top: 0;
     }
 
     /* About, Privacy, & Terms Pages Styling */
     .page-header {
-        padding: 0 20px; /* Apply wide padding */
+        padding: 0 20px;
         max-width: none;
-        justify-content: center; /* Center the header title */
+        justify-content: center;
         position: relative;
     }
     
     .page-header .back-btn {
-        /* Position the back button absolutely to not affect title centering */
         position: absolute;
         left: 20px;
     }
 
     .page-container {
-        max-width: 800px; /* Increase the max-width for content */
+        max-width: 800px;
     }
 }
