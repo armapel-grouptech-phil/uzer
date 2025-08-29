@@ -66,6 +66,7 @@
 
     .page-header {
         margin: 0 auto;
+        max-width: 1700px;
         width: 100%;
         position: relative;
     }
