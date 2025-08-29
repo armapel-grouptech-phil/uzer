@@ -38,9 +38,8 @@
         </a>
     </div>
 
+    <!-- The <main> tag contains ONLY the columns now -->
     <main class="main-content main-content-grid">
-
-        <!-- Column 1: Contains the form elements AND the footer -->
         <div class="form-column">
             <h1>Find your new identity.</h1>
             <div class="input-group">
@@ -56,29 +55,27 @@
                 </div>
             </div>
             <button class="generate-btn" id="generate-btn">Generate!</button>
-            
-            <!-- The footer is now INSIDE the form column -->
-            <footer class="footer">
-                <div class="footer-line-one">
-                    <span>from</span>
-                    <img src="/logo/armapel-logo-black.png" alt="Armapel Logo" class="footer-logo">
-                </div>
-                <div class="footer-copyright">
-                    <div></div><span>©2025 <strong>uzer!</strong> , All Rights Reserved.</span>
-                </div>
-                <div class="footer-version"> Version 1.0.3
-                </div>
-            </footer>
         </div>
 
-        <!-- Column 2: Contains the loader and results -->
         <div class="results-column">
             <div class="loader-container" id="loader-container"><div class="spinner"></div></div>
             <div id="results-container"></div>
         </div>
-
     </main>
     
+    <!-- The footer is moved OUTSIDE and AFTER the main tag -->
+    <footer class="footer">
+        <div class="footer-line-one">
+            <span>from</span>
+            <img src="/logo/armapel-logo-black.png" alt="Armapel Logo" class="footer-logo">
+        </div>
+        <div class="footer-copyright">
+            <div></div><span>©2025 <strong>uzer!</strong> , All Rights Reserved.</span>
+        </div>
+        <div class="footer-version"> Version 1.0.3
+        </div>
+    </footer>
+
     <div class="toast" id="toast">Copied!</div>
 
     <script src="/js/script.js"></script>
